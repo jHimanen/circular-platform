@@ -1,3 +1,3 @@
-# Strapi application
+# Data sharing platform prototype
 
-A quick description of your strapi application
+This is a prototype for a data sharing platform. The CMS is built with Strapi. Authenticated users will be able to access JSON data through API calls.
