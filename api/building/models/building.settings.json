@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buildings",
+  "info": {
+    "name": "Building"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "materials": {
+      "via": "buildings",
+      "collection": "material",
+      "dominant": true
+    },
+    "Demolished": {
+      "type": "date"
+    }
+  }
+}
