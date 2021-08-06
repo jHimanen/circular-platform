@@ -8,6 +8,12 @@ const url = 'https://newsapi.org/v2/everything?' +
             `apiKey=${process.env.NEWS_API_KEY}`
 
 module.exports = async () => {
+    console.log('Refreshing news data...')
+    const old = await strapi.query('article').find({_limit: -1})
+    old.map(article => article.id).forEach(oldId => {
+        strapi.query('article').delete({ id: oldId })
+    })
+
     const { data } = await axios.get(url)
     const articles = data.articles.length < 5
                     ? data.articles
@@ -20,4 +26,5 @@ module.exports = async () => {
             URL: article.url
         })
     })
+    console.log('Done!')
 }

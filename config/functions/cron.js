@@ -11,7 +11,7 @@
  */
 
 module.exports = {
-  //'*/1 * * * *': () => {
-  //  strapi.config.functions.news()
-  //}
+  '*/1 * * * *': () => {
+    strapi.config.functions.news()
+  }
 };
