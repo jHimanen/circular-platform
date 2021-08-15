@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notices",
+  "info": {
+    "name": "Notice"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "created": {
+      "type": "datetime"
+    },
+    "materials": {
+      "collection": "material"
+    }
+  }
+}

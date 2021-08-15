@@ -12,26 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "classification": {
       "type": "string",
       "required": true
     },
-    "buildings": {
-      "via": "materials",
-      "collection": "building"
-    },
-    "Description": {
+    "description": {
       "type": "text",
       "required": false,
       "default": "Ei kuvausta saatavilla."
     },
-    "Usage": {
-      "type": "text",
+    "type": {
+      "type": "string",
       "required": false,
-      "default": "Ei määriteltyjä käyttökohteita."
+      "default": "Ei määriteltyä tyyppiä."
     },
-    "ThermalConductivity": {
-      "type": "decimal"
+    "isWaste": {
+      "type": "boolean"
     }
   }
 }

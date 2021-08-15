@@ -1,0 +1,2 @@
+GET https://www.materiaalitori.fi/api/rfo
+content-type: application/json
