@@ -1,2 +1,2 @@
-GET https://newsapi.org/v2/everything?q=building&from=2021-07-03&sortBy=publishedAt&apiKey=fc0dd92fd1ad4c39ac0032e668c7dab4
+GET https://newsapi.org/v2/everything?q=circular_economy&from=2021-08-01&sortBy=publishedAt&apiKey=fc0dd92fd1ad4c39ac0032e668c7dab4
 content-type: application/json

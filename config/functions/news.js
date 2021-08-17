@@ -2,8 +2,8 @@ require('dotenv').config()
 const axios = require('axios')
 
 const url = 'https://newsapi.org/v2/everything?' +
-            'q=building&' +
-            'from=2021-07-10&' +
+            'q=circular_economy&' +
+            'from=2021-08-01&' +
             'sortBy=publishedAt&' +
             `apiKey=${process.env.NEWS_API_KEY}`
 
@@ -14,7 +14,10 @@ module.exports = async () => {
         strapi.query('article').delete({ id: oldId })
     })
 
-    const { data } = await axios.get(url)
+    const { data } = await axios.get(url).catch(error => {
+        console.log(error.message)
+    })
+
     const articles = data.articles.length < 5
                     ? data.articles
                     : data.articles.slice(0, 5)

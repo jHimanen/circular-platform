@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "notices",
   "info": {
-    "name": "Notice"
+    "name": "Notice",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,6 +20,9 @@
     },
     "materials": {
       "collection": "material"
+    },
+    "rfoType": {
+      "type": "string"
     }
   }
 }
