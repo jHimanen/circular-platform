@@ -21,6 +21,7 @@ module.exports = async () => {
                 type: material.type,
                 isWaste: material.isWaste
             })
+            .catch(error => console.log(error.message))
 
             materialArr.push(createdMaterial)
         }

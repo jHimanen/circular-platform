@@ -19,7 +19,8 @@
     "description": {
       "type": "text",
       "required": false,
-      "default": "Ei kuvausta saatavilla."
+      "default": "Ei kuvausta saatavilla.",
+      "unique": true
     },
     "type": {
       "type": "string",
