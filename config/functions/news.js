@@ -9,18 +9,12 @@ const url = 'https://newsapi.org/v2/everything?' +
 
 module.exports = async () => {
     console.log('Refreshing news data...')
-    const old = await strapi.query('article').find({_limit: -1})
-    old.map(article => article.id).forEach(oldId => {
-        strapi.query('article').delete({ id: oldId })
-    })
 
     const { data } = await axios.get(url).catch(error => {
         console.log(error.message)
     })
 
-    const articles = data.articles.length < 5
-                    ? data.articles
-                    : data.articles.slice(0, 5)
+    const articles = data.articles
 
     articles.forEach(article => {
         strapi.query('article').create({
