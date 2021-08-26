@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "tokens",
+  "collectionName": "tags",
   "info": {
-    "name": "Token"
+    "name": "Tag"
   },
   "options": {
     "increments": true,
@@ -11,13 +11,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "token": {
+    "tag": {
       "type": "string"
-    },
-    "user": {
-      "via": "token",
-      "plugin": "users-permissions",
-      "model": "user"
     }
   }
 }

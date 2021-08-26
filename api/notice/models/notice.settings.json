@@ -24,6 +24,9 @@
     },
     "rfoType": {
       "type": "string"
+    },
+    "tags": {
+      "collection": "tag"
     }
   }
 }

@@ -33,7 +33,7 @@ module.exports = async (ctx, next) => {
                     isAdmin = false;
                 }
                 delete ctx.request.query.token;
-                
+
             } else if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
                 // use the current system with JWT in the header
                 const decoded = await strapi.plugins[
@@ -118,7 +118,6 @@ module.exports = async (ctx, next) => {
     // Execute the action.
     await next();
     };
-
     const handleErrors = (ctx, err = undefined, type) => {
     throw strapi.errors[type](err);
 };
